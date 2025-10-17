@@ -1,0 +1,52 @@
+.hero {
+  background: url("education.jpg") center/cover no-repeat;
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+}
+
+.hero-btn {
+  background-color: #ff6b35;
+  color: white;
+  margin-top: 25px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+}
