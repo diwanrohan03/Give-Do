@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/Give-Do/static/css/main.694e666a.css",
-    "main.js": "/Give-Do/static/js/main.e1fe9abb.js",
+    "main.css": "/Give-Do/static/css/main.98a4b38e.css",
+    "main.js": "/Give-Do/static/js/main.e069442f.js",
     "static/js/453.1116dabc.chunk.js": "/Give-Do/static/js/453.1116dabc.chunk.js",
     "static/media/edu.jpg": "/Give-Do/static/media/edu.76698bda3081c28b5009.jpg",
     "static/media/food.jpg": "/Give-Do/static/media/food.4d3632fd479760d00713.jpg",
-    "static/media/education.jpg": "/Give-Do/static/media/education.2a5a5f29af14939d2b8f.jpg",
+    "static/media/hero2.jpg": "/Give-Do/static/media/hero2.4d3632fd479760d00713.jpg",
+    "static/media/hero3.jpg": "/Give-Do/static/media/hero3.2a5a5f29af14939d2b8f.jpg",
+    "static/media/abandoned.jpg": "/Give-Do/static/media/abandoned.28ba26bd71ecac121c4b.jpg",
     "static/media/Health.png": "/Give-Do/static/media/Health.168e5e7f4537ec24b94f.png",
+    "static/media/christmas.jpg": "/Give-Do/static/media/christmas.a884117870901c7ccac7.jpg",
+    "static/media/hero1.jpg": "/Give-Do/static/media/hero1.a884117870901c7ccac7.jpg",
     "index.html": "/Give-Do/index.html",
-    "main.694e666a.css.map": "/Give-Do/static/css/main.694e666a.css.map",
-    "main.e1fe9abb.js.map": "/Give-Do/static/js/main.e1fe9abb.js.map",
+    "main.98a4b38e.css.map": "/Give-Do/static/css/main.98a4b38e.css.map",
+    "main.e069442f.js.map": "/Give-Do/static/js/main.e069442f.js.map",
     "453.1116dabc.chunk.js.map": "/Give-Do/static/js/453.1116dabc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.694e666a.css",
-    "static/js/main.e1fe9abb.js"
+    "static/css/main.98a4b38e.css",
+    "static/js/main.e069442f.js"
   ]
 }
