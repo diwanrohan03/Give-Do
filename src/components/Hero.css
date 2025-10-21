@@ -1,52 +1,97 @@
 .hero {
-  background: url("education.jpg") center/cover no-repeat;
-  color: white;
+  position: relative;
   height: 80vh;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0 20px;
+  transition: background-image 1s ease-in-out;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 30px;
-  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  max-width: 90%;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 2.5rem;
-  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.hero p {
-  margin-top: 12px;
-  font-size: 1.1rem;
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-btn {
-  background-color: #ff6b35;
-  color: white;
-  margin-top: 25px;
-  padding: 10px 25px;
-  font-size: 1rem;
+  background-color: #28a745;
   border: none;
+  padding: 0.8rem 1.5rem;
+  color: white;
   border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-/* Mobile responsive */
-@media (max-width: 600px) {
+.hero-btn:hover {
+  background-color: #218838;
+}
+
+/* Dots for carousel */
+.hero-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #28a745;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
   .hero {
     height: 60vh;
   }
 
-  .hero h1 {
+  .hero-content h1 {
     font-size: 1.8rem;
   }
 
-  .hero p {
-    font-size: 0.95rem;
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }

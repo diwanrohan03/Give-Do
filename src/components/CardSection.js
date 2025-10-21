@@ -5,6 +5,8 @@ import "./CardSection.css";
 import educationImg from "./edu.jpg";
 import HealthcareImg from "./Health.png";
 import FoodImg from "./food.jpg";
+import ChristmasImg from "./christmas.jpg";
+import AbandonedImg from "./abandoned.jpg";
 
 const CardSection = () => {
   const cards = [
@@ -22,7 +24,18 @@ const CardSection = () => {
       image: FoodImg,
       title: "Feed the Hungry",
       description: "Contribute meals to families struggling with hunger."
-    }
+    },
+    {
+      image: ChristmasImg,
+      title: "Christmas celebration",
+      description: "Provide essential needs to those in need."
+    },
+    {
+      image: AbandonedImg,
+      title: "protect abandoned elders",
+      description: "Provide essential needs to those in need."
+    },
+    
   ];
 
   return (
