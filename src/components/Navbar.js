@@ -13,6 +13,7 @@ const Navbar = () => {
         <li>Causes</li>
         <li>About</li>
         <li>Contact</li>
+        <button className="donate-btn">Login</button>
         <button className="donate-btn">Donate Now</button>
       </div>
 

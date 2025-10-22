@@ -26,7 +26,16 @@ const Hero = () => {
       <div className="hero-content">
         <h1>Together, We Can Make a Difference</h1>
         <p>Support meaningful causes and help change lives around the world.</p>
-        <button className="hero-btn">Start Donating</button>
+        <button
+          className="hero-btn"
+          onClick={() =>
+            document
+              .getElementById("card-section")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Start Donating
+        </button>
       </div>
 
       <div className="hero-dots">

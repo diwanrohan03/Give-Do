@@ -37,7 +37,6 @@
   cursor: pointer;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .card img {
     height: 150px;

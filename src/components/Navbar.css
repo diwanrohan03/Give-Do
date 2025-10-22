@@ -41,6 +41,10 @@
   font-weight: 600;
   margin-left: 10px;
   cursor: pointer;
+  transition: color 0.2s;
+}
+.donate-btn:hover {
+  color: #0077cc;
 }
 
 /* ======= MOBILE STYLES ======= */
