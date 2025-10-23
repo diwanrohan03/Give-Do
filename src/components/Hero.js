@@ -18,7 +18,7 @@ const Hero = () => {
 
   return (
     <section
-      className="hero"
+      className="hero" id="hero"
       style={{
         backgroundImage: `url(${images[current]})`,
       }}

@@ -15,6 +15,7 @@ import ChristmasPage from "./pages/ChristmasPage";
 import AbandonedPage from "./pages/AbandonedPage";
 import WaterPage from "./pages/WaterPage";
 import AnimalPage from "./pages/AnimalPage";
+import Login from "./pages/Login";
 
 
 function App() {
@@ -22,9 +23,16 @@ function App() {
     <Router>
       {/* Navbar always visible */}
       <Navbar />
-      <Hero />
-      <CardSection />
       <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <CardSection />
+            </>
+          }
+        />
 
         {/* Other pages */}
         <Route path="/education" element={<EducationPage />} />
@@ -34,6 +42,7 @@ function App() {
         <Route path="/abandoned" element={<AbandonedPage />} />
         <Route path="/water" element={<WaterPage />} />
         <Route path="/animal" element={<AnimalPage />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       {/* Footer always visible */}

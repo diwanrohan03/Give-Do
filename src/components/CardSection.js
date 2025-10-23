@@ -22,7 +22,7 @@ const CardSection = () => {
   ];
 
   return (
-    <section className="card-section" id="card-section">
+    <section className="card-section" id="causes">
       <h2>Our Causes</h2>
       <div className="card-container">
         {cards.map((card, index) => (
