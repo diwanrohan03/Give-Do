@@ -14,6 +14,7 @@
   font-size: 1.6rem;
   font-weight: bold;
   color: #2c3e50;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -21,91 +22,148 @@
   align-items: center;
   list-style: none;
   gap: 20px;
+  transition: all 0.3s ease;
 }
 
 .nav-links li {
+  position: relative;
   cursor: pointer;
   font-weight: 500;
-  transition: color 0.2s;
 }
 
 .nav-links li:hover {
-  color: #0077cc;
+  color: red;
 }
 
-.donate-btn {
-  background-color: #ff6b35;
-  color: white;
+/* ==== LOGIN BUTTON STYLING ==== */
+.login-btn {
+  background: transparent;
+  color: #ff6b35;
+  border: 2px solid #ff6b35;
   padding: 8px 18px;
   border-radius: 6px;
   font-weight: 600;
-  margin-left: 10px;
   cursor: pointer;
-  transition: color 0.2s;
-}
-.donate-btn:hover {
-  color: #0077cc;
+  transition: all 0.3s ease;
 }
 
-/* ======= MOBILE STYLES ======= */
+.login-btn:hover {
+  background: #ff6b35;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* ==== DONATE BUTTON (for consistency) ==== */
+.donate-btn-secondary {
+  background: transparent;
+  color: #ff6b35;
+  border: 2px solid #ff6b35;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.donate-btn-secondary:hover {
+  background-color: red;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  list-style: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu li:hover {
+  background: #f3f3f3;
+}
+
+/* Hamburger menu */
 .hamburger {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
   width: 24px;
   height: 18px;
+  justify-content: space-between;
   cursor: pointer;
 }
 
 .hamburger span {
   height: 3px;
-  width: 100%;
   background: #333;
   border-radius: 2px;
   transition: 0.3s;
 }
 
-/* Active hamburger animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Mobile view */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
   .nav-links {
     position: absolute;
+    flex-direction: column;
     top: 60px;
     right: 0;
     background: white;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 15px;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transform: translateY(-150%);
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    text-align: left;
+    padding: 30px 20px;
+    transform: translateX(100%);
     opacity: 0;
-    transition: all 0.3s ease;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
   }
 
   .nav-links.open {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 
-  .donate-btn {
-    width: 80%;
-    margin: auto;
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: #f9f9f9;
+    padding-left: 15px;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }

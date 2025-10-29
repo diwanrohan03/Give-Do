@@ -1,63 +1,116 @@
 .hero {
-  height: 100vh;
+  position: relative;
+  height: 80vh;
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
-  transition: background-image 1s ease-in-out;
-  position: relative;
+  text-align: center;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px 40px;
-  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .hero-btn {
-  background-color: #0077cc;
+  background-color: red;
   color: white;
-  margin-top: 15px;
-  padding: 10px 20px;
   border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
-.hero-dots {
+/* Arrow buttons */
+.arrow {
   position: absolute;
-  bottom: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
   cursor: pointer;
+  z-index: 3;
 }
 
-.dot.active {
-  background: white;
+.left-arrow {
+  left: 25px;
 }
 
-/* Mobile */
+.right-arrow {
+  right: 25px;
+}
+
+.arrow:hover {
+  color: #000000;
+}
+
+/* 📱 Responsive for mobile screens */
 @media (max-width: 768px) {
   .hero {
-    height: 70vh;
+    height: 60vh; /* reduce height */
+    padding: 0 15px;
   }
 
-  .hero-content {
-    padding: 10px;
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .arrow {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh; /* smaller for very small phones */
   }
 
   .hero h1 {
     font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    font-size: 1.4rem;
   }
 }
